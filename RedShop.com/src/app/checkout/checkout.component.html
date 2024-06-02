@@ -1,0 +1,36 @@
+<section class="section-p1 section-m1">
+    <h3 class="heading">CheckOut
+        <hr id="heading-hr">
+        <p id="orderMsg">{{orderMsg}}</p>
+    </h3>
+    <div class="flex">
+        <div class="section-p1 section-one">
+            <h3>Enter Details</h3>
+            <form #orderData="ngForm" #disable="ngForm" (ngSubmit)="orderNow(orderData.value)">
+                <ul>
+                    <li><input required type="email" ngModel name="Email" placeholder="Email" id="email" class="Detail-Field"></li>
+                    <li><input required type="text" ngModel name="FirstName" placeholder="FirstName" id="FirstName" class="Detail-Field"></li>
+                    <li><input required type="text" ngModel name="LastName" placeholder="LastName" id="LastName" class="Detail-Field"></li>
+                    <li><input required type="number" ngModel name="Pin_Code" placeholder="Pin_Code" id="pincode" class="Detail-Field"></li>
+                    <li><input required type="text" ngModel name="address" placeholder="Address" id="contactNo" class="Detail-Field"></li>
+                    <li><input required type="number" ngModel name="Contact_No" placeholder="Contact_No." id="contactNo" class="Detail-Field"></li>
+                    <li><input type="submit" [disabled]="!disable.valid" value="Place Order" class="Detail-Field"></li>
+                </ul>
+            </form>
+        </div>
+
+        <div id="vertical-Line"></div>
+
+        <div class="section-two">
+            <div class="block-one">
+                <h3>Total Amount :</h3>
+                <h3 id="amount">{{totalPrice | number: '1.0-0'}}</h3>
+            </div>
+            <div class="block-two">
+                <h3>Payment Method : </h3>
+                <h3 id="method">Payment on Delivery</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>

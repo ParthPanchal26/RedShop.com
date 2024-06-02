@@ -1,0 +1,58 @@
+<section class="section-p1">
+    <div class="borderBox">
+        <div class="addProduct">
+            <h1 id="heading" class="text-shadow">Update Product</h1>
+            <p class="message">{{UpdateProductMsg}}</p>
+        </div>
+        <div class="container">
+            <form class="form" id="form" #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)">
+                <div class="flex1">
+                    <div class="label">
+                        <label for="name">Name : </label> <br>
+                        <input type="text" name="name" ngModel="{{productData?.name}}" id="name" class="name shadow" required>
+                    </div>
+                    <div>
+                        <label for="price">Price : </label> <br>
+                        <input type="text" name="price" ngModel="{{productData?.price}}" id="price" class="price shadow" required>
+                    </div>
+                </div>
+                <br>
+                <div class="flex2">
+                    <div class="label">
+                        <label for="color">Color : </label> <br>
+                        <input type="text" name="color" ngModel="{{productData?.color}}" id="color" class="shadow" required>
+                    </div>
+                    <div>
+                        <label for="category">Category : </label> <br>
+                        <input type="text" name="category" ngModel="{{productData?.category}}" id="category" class="shadow" required>
+                    </div>
+                </div>
+                <br>
+                <div class="flex3">
+                    <div class="label">
+                        <label for="description">Description : </label> <br>
+                        <textarea name="description" ngModel="{{productData?.description}}" id="description" class="shadow"
+                            required></textarea>
+                    </div>
+                    <div>
+                        <label for="imgURL">Image URL : </label> <br>
+                        <!-- <input type="text" ngModel="{{productData?.ImageURL}}" name="ImageURL" id="ImgURL" class="shadow" required> -->
+                        <input type="file" (change)="onFileSelected($event)"  [ngModel]="ImageURL" name="ImageURL" id="ImgURL" required />
+                    </div>
+                </div>
+                <br>
+                <div class="flex4">
+                    <div class="label">
+                        <label for="date">Date : </label> <br>
+                        <input type="date" name="date" ngModel="{{productData?.date}}" id="date" class="date shadow" required>
+                    </div>
+                    <div>
+                        <button type="submit" [disabled]="addProduct.invalid" name="submit" id="submit"
+                            value="Add Product" class="btnn shadow">Update Product</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<hr>

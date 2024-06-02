@@ -1,0 +1,73 @@
+<section class="section-m2 products-Link">
+    <div class="category-block" (click)="viewPhone()">
+        <img class="Category-images" src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d64cae0f8081256a.png?q=100"
+            alt=""><span class="categoty-Name">SmartPhones & Tablets </span>
+    </div>
+    <div class="category-block" (click)="viewKichenAndHome()">
+        <img class="Category-images" src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d300931a0fd1c17e.png?q=100"
+            alt=""><span class="categoty-Name">Home & Kitchen </span>
+    </div>
+    <div class="category-block" (click)="viewClothes()">
+        <img class="Category-images" src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d44ffc537ed6e241.png?q=100"
+            alt=""><span class="categoty-Name">Clothes </span>
+    </div>
+    <div class="category-block" (click)="viewBeautyAndPersonalCare()">
+        <img class="Category-images" src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/994a83c90019fb5f.png?q=100"
+            alt=""><span class="categoty-Name">Beauty & Personal Care </span>
+    </div>
+    <div class="category-block" (click)="viewSportsAndOutdoor()">
+        <img class="Category-images" src="https://rukminim1.flixcart.com/image/612/612/jxqfonk0/kit/3/3/r/football-training-kit-kit2-nivia-original-imaf42fyevkzq8hz.jpeg?q=70"
+            alt=""><span class="categoty-Name">Sports & Outdoors </span>
+    </div>
+    <div class="category-block" (click)="viewGadgets()">
+        <img class="Category-images" src="https://rukminim1.flixcart.com/image/612/612/l1pc3gw0/smartwatch/8/i/n/-original-imagd7d44w2vfjuj.jpeg?q=70"
+            alt=""><span class="categoty-Name">Gadgets</span>
+    </div>
+    <div class="category-block" (click)="viewToyAndGames()">
+        <img class="Category-images" src="https://rukminim1.flixcart.com/image/612/612/kdakakw0/puzzle/a/w/u/36-36-pieces-alphabet-floor-mats-for-kids-puzzle-foam-mat-for-original-imafu7gxjasb7ebx.jpeg?q=70"
+            alt=""><span class="categoty-Name">Toys & Games </span>
+    </div>
+</section>
+<hr style="margin-top: 30px ; color:rgb(0, 0, 0); background-color: white">
+<section id="product1" class="section-p1">
+    <div class="pro-container">
+
+        <div class="pro" *ngFor="let item of homeProduct">
+            <img routerLink="/product-details/{{item.id}}" src="{{item.baseImg}}" class="productIMG"
+                alt="image not appear">
+            <div class="des">
+                <h5 routerLink="/product-details/{{item.id}}">{{item.name}}</h5>
+                <div class="star">
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4 routerLink="/product-details/{{item.id}}" class="price">{{item.price}}</h4>
+            </div>
+
+            <a routerLink="/product-details/{{item.id}}" class="buy"><i class="fa fa-shopping-cart"
+                    id="addCart"></i></a>
+        </div>
+
+    </div>
+</section>
+
+<section id="pagination" class="section-p1">
+    <a routerLink="/shop" routerLinkActive="pageActive">1</a>
+    <a routerLink="#" routerLinkActive="pageActive">2</a>
+    <a routerLink="#" routerLinkActive="pageActive">3</a>
+    <a routerLink="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>SignUp To get News about Offers</h4>
+        <p>Get E-mail Updates about letest shop and <span>special offers!</span></p>
+    </div>
+    <div class="form">
+        <input type="email" name="E-mailNews" placeholder="Enter your Email">
+        <button>Sign up</button>
+    </div>
+</section>

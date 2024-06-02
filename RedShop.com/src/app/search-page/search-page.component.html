@@ -1,0 +1,10 @@
+<section class="section-p1"></section>
+<div class="product-container" *ngFor="let item of searchProduct">
+    <img routerLink="/product-details/{{item.id}}" src="{{item.baseImg}}" alt="Product Image" class="product-image">
+    <div routerLink="/product-details/{{item.id}}" class="product-info">
+      <h1 class="product-name" title="{{item.name}}">{{item.name}}</h1>
+      <div class="product-rating">Product Rating</div>
+      <div class="product-price">₹{{item.price}}</div>
+      <textarea class="product-description" cols="30" rows="7">{{item.description}}</textarea>
+    </div>
+  </div>

@@ -1,0 +1,106 @@
+    <!-- Seller-Sign-Up -->
+<hr style="margin-left: 20px; margin-right: 20px; margin-bottom: -50px; visibility:hidden;">
+<div *ngIf="showLogin" class="row">
+    <div class="col-md-5 mx-auto">
+        <div class="card rounded-3.9 shadow">
+            <div class="card-header bg-white">
+                <h3 class="text-muted">Seller-Sign Up</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" #sellerSignUpForm="ngForm">
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="provider_name"><span class="text-danger" style="font-size: 30px;">*</span>Name : </label>
+                        <input [(ngModel)]="provider_name" name="provider_name" type="text" class="form-control shadow rounded-2" id="Fname" required>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="DOB"><span class="text-danger" style="font-size: 30px;">*</span>Date Of Birth : </label>
+                        <input [(ngModel)]="DOB" name="DOB" type="date" class="form-control shadow rounded-2" id="DOB" required>
+                    </div>
+                </div>
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="city"><span class="text-danger" style="font-size: 30px;">*</span>City : </label>
+                        <input [(ngModel)]="city" name="city" type="text" class="form-control shadow rounded-2" id="city" required>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="state"><span class="text-danger" style="font-size: 30px;">*</span>State : </label>
+                        <input [(ngModel)]="state" name="state" type="text" class="form-control shadow rounded-2" id="state" required>
+                    </div>
+                </div>
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="country"><span class="text-danger" style="font-size: 30px;">*</span>Country : </label>
+                        <input [(ngModel)]="country" name="country" type="text" class="form-control shadow rounded-2" id="country" required>
+                    </div>
+                </div>
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="contactNo"><span class="text-danger" style="font-size: 30px;">*</span>Contact No : </label>
+                        <input type="text" maxlength="10" (keypress)="OnlyNumbersAllowed($event)" [(ngModel)]="contactNo" name="contactNo" class="form-control shadow rounded-2" id="contactNo" required>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="contactNo_2"><span class="text-danger" style="font-size: 30px;">*</span> Another Contact No : </label>
+                        <input type="text" maxlength="10" (keypress)="OnlyNumbersAllowed($event)" [(ngModel)]="contactNo_2" name="contactNo_2" class="form-control shadow rounded-2" id="contactNo" required>
+                    </div>
+                </div>
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="email"><span class="text-danger" style="font-size: 30px;">*</span>Email : </label>
+                        <input [(ngModel)]="email" name="email" type="email" class="form-control shadow rounded-2" id="email" required>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="password"><span class="text-danger" style="font-size: 30px;">*</span>Create Password : </label>
+                        <input [(ngModel)]="password" name="password" type="password" class="form-control shadow rounded-2" id="password" required>
+                    </div>
+                </div>
+
+                    <button (click)="SignUp(sellerSignUpForm.value)" [disabled]="sellerSignUpForm.invalid" type="submit" class="btn shadow btn-primary mb-2 mt-1 shadow">Sign Up</button>
+                    <div class="links">
+                        <a (click)="openLogin()" style="color: blue;">Have an account?&nbsp;&nbsp;&nbsp;<span style="color: red;">Sign In</span> </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+    <!-- Seller-Sign In -->
+
+<div *ngIf="!showLogin" class="row rowLogin">
+    <div class="col-md-5 mx-auto">
+        <div class="message">{{authError}}</div>
+        <div class="card rounded-3.9 shadow cardLogin">
+            <div class="card-header bg-white">
+                <h3 class="text-muted">Seller-Sign In</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" #sellerSignInForm="ngForm" >
+                    <div class="form-group p-1">
+                        <label for="">Email : </label>
+                        <input [(ngModel)]="email" type="email" class="form-control shadow rounded-2 inputLoginFields" name="email" id="email" required>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="">Password : </label>
+                        <input [(ngModel)]="password" type="password" class="form-control shadow rounded-2 inputLoginFields" name="password" id="password" required>
+                    </div>
+                    <button (click)="login(sellerSignInForm.value)" [disabled]="sellerSignInForm.invalid" type="submit" class="btn btn-primary mb-2 mt-1 shadow">Sign In</button>
+                    <div>
+                        <a (click)="openSignUp()" style="color: blue;">Need account?&nbsp;&nbsp;&nbsp;<span style="color: red;">Sign Up</span> </a>
+                        <br>
+                        <a routerLink="/forgot-password"><span style="color: red;">Forgot Password ?</span> </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr style="margin-left: 20px; margin-right: 20px;">

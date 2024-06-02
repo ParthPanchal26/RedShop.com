@@ -1,0 +1,107 @@
+<!-- Product details  -->
+<section id="prodetails" class="section-p1" *ngIf="productData">
+    <div class="single-pro-image">
+        <img src="{{productData.baseImg}}" id="MainImg" width="100%" alt="">
+
+        <div class="small-img-group">
+            <div class="small-img-col">
+                <img src="{{productData.baseImg}}" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="{{productData.baseImg}}" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="{{productData.baseImg}}" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="{{productData.baseImg}}" width="100%" class="small-img" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="single-pro-details">
+        <h6>Category : {{productData.category}}</h6>
+        <h4>{{productData.name}}</h4>
+        <h2>{{productData.price}}</h2>
+        <select>
+            <option>Select color</option>
+            <option>Black</option>
+            <option>Purple</option>
+            <option>White</option>
+        </select>
+        <button class="quantity min" (click)="handelQuantity('min')">-</button>
+        <input value="{{productQuantity}}" disabled step="any" onkeydown="return false" type="text">
+        <button class="quantity plus" (click)="handelQuantity('plus')">+</button>
+        <button *ngIf="!removeCart" class="normal" (click)="AddToCart()">Add To Cart</button>
+        <button *ngIf=" removeCart" class="normal" (click)="RemoveToCart(productData.id)">Remove To Cart</button>
+        <h4>Product Details</h4>
+        <hr width="160px">
+        <textarea cols="90" disabled rows="9">{{productData.description}}</textarea>
+    </div>
+</section>
+
+<div class="seller-details-section" *ngIf="productData">
+    <h3> Seller Details</h3>
+     <hr> 
+     <h4><h6>Seller Name&nbsp;:&nbsp;{{productData.sellerName}}</h6></h4>    
+     <h4><h6>Seller Email&nbsp;&nbsp;:&nbsp;{{productData.sellerEmail}}</h6></h4>    
+     <h4><h6>Contact No&nbsp;&nbsp;&nbsp;:&nbsp;{{productData.sellerNo}}</h6></h4>    
+     <h4><h6>Date added&nbsp;&nbsp;:&nbsp;{{productData.date}}</h6></h4>    
+</div>
+
+
+<!-- Suggested Products  -->
+<section id="product1" class="section-p1 descText">
+    <h2>Suggested</h2>
+    <p>Complete your look with our top-rated accessories, perfect for any occasion!</p>
+    <div class="pro-container">
+
+        <div class="pro" *ngFor="let item of homeProduct" (click)="reload()">
+            <img routerLink="/product-details/{{item.id}}" src="{{item.baseImg}}" class="productIMG" alt="image not appear">
+            <div class="des">
+                <h5 routerLink="/product-details/{{item.id}}">{{item.name}}</h5>
+                <div class="star">
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4 routerLink="/product-details/{{item.id}}" class="price">{{item.price}}</h4>
+            </div>
+            
+            <a routerLink="/product-details/{{item.id}}" class="buy"><i class="fa fa-shopping-cart" id="addCart"></i></a>
+        </div>
+
+        <div class="pro" *ngFor="let item of clothes" (click)="reload()">
+            <img routerLink="/product-details/{{item.id}}" src="{{item.baseImg}}" class="productIMG" alt="image not appear">
+            <div class="des">
+                <h5 routerLink="/product-details/{{item.id}}">{{item.name}}</h5>
+                <div class="star">
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star chaked"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4 routerLink="/product-details/{{item.id}}" class="price">{{item.price}}</h4>
+            </div>
+            
+            <a routerLink="/product-details/{{item.id}}" class="buy"><i class="fa fa-shopping-cart" id="addCart"></i></a>
+        </div>
+    </div>
+</section>
+<hr>
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>SignUp To get News about Offers</h4>
+        <p>Get E-mail Updates about letest shop and <span>special offers!</span></p>
+    </div>
+    <div class="form">
+        <input type="email" name="E-mailNews" placeholder="Enter your Email">
+        <button>Sign up</button>
+    </div>
+</section>
+
+<hr>

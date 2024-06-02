@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-5 mx-auto">
+        <span class="text-danger">{{userAuthError}}</span>
+        <div class="card rounded-3.9 shadow">
+            <div class="card-header bg-white">
+                <h3 class="text-muted">Sign In</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" #LoginUserForm="ngForm" (ngSubmit)="login(LoginUserForm.value)" >
+                    <div class="form-group p-1">
+                        <label for="">Email : </label>
+                        <input [(ngModel)]="loginUserData.email" type="email" class="form-control shadow rounded-2" name="email" id="email" required>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="">Password : </label>
+                        <input [(ngModel)]="loginUserData.password" type="password" class="form-control shadow rounded-2" name="password" id="password" required>
+                    </div>
+                    <button (click)="loginUser()" [disabled]="LoginUserForm.invalid" type="submit" class="btn btn-primary mb-2 mt-1 shadow">Sign In</button>
+                    <div>
+                        <a routerLink="/register" style="color: blue;">Need account?&nbsp;&nbsp;&nbsp;<span style="color: red;">Sign Up</span> </a>
+                        <br>
+                        <a routerLink="/forgot-password"><span style="color: red;">Forgot Password ?</span> </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr style="margin-left: 20px; margin-right: 20px;">

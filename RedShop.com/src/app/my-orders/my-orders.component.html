@@ -1,0 +1,33 @@
+<section class="section-p1 section-m1" *ngIf="orderData?.length !== 0">
+    <div>
+        <table class="table tableOne">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Cancel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orderData">
+                    <td class="proImgWidth"><img routerLink="/product-details/{{order['0'].productId}}"
+                            src="{{order['0'].baseImg}}" class="proImg" /></td>
+                    <td>{{order['0'].name}}</td>
+                    <td>{{order['0'].quantity}}</td>
+                    <td>{{order.totalPrice | number: '1.0-0'}}</td>
+                    <td>{{processMsg}}</td>
+                    <td>
+                        <button *ngIf="!order['0'].canceled" class="icon1 text-danger" (click)="cancel(order)">Cancel</button>
+                        <span *ngIf="order['0'].canceled"><i class="bi bi-check-circle"></i>Canceled</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+<div *ngIf="orderData?.length == 0" class="text-shadow no-Record">-- No Record Found --</div>
+<hr>

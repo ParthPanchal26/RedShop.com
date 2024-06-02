@@ -1,0 +1,158 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Spartan', sans-serif; */
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: 5% 15%;
+}
+
+.left-section {
+    margin-right: 27px;
+    width: 327px;
+}
+
+.info-group{
+    display: flex;
+}
+
+.left-section h3{
+    margin-left: 8px;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: 'Spartan', sans-serif;
+}
+
+.left-section hr{
+    width: 300;
+    text-align: center;
+}
+
+.left-section .info p{
+    font-weight: 600;
+}
+
+.left-section .info{
+    /* border: 2px solid green; */
+    display: flex;
+}
+
+i{
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 25px;
+    text-align: center;
+}
+
+.social-icons{
+    margin-top: 40px;
+}
+
+.fa{
+    color:#465b52;
+}
+
+/* ------------------------------- */
+
+.form-group-one {
+    display: flex;
+    margin: 10px 1px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+label {
+    padding: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Spartan', sans-serif;
+}
+
+input {
+    border-bottom: 2px solid #088178;
+    width: 250px;
+    padding: 3px;
+    line-height: 2px;
+    font-weight: 500;
+    font-size: 16px;
+    outline: none;
+    fill: none;
+    background: transparent;
+    font-family: 'Spartan', sans-serif;
+    transition: 0.4s;
+}
+
+input:hover {
+    font-size: 17px;
+    padding-bottom: 4px;
+}
+
+button {
+    border: 2px solid #088178;
+    width: 130px;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 6px;
+    border-radius: 0.3rem;
+    font-family: 'Spartan', sans-serif;
+}
+
+textarea {
+    border-bottom: 2px solid #088178;
+    width: 400px;
+    outline: none;
+    padding: 5px;
+    font-weight: 600;
+    overflow-y: hidden;
+    font-family: 'Spartan', sans-serif;
+    transition: 0.4s;
+}
+
+textarea:hover {
+    font-size: 17px;
+    padding-bottom: 4px;
+}

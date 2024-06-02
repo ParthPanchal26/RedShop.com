@@ -1,0 +1,124 @@
+/* Text Font */
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Default Properties */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default h1 style */
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Default h2 style */
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Default h3 style */
+/* h3{
+    font-size: 28px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+} */
+
+/* Default h4 style */
+h4{
+    font-size: 20px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Default h5 style */
+/* h4{
+    font-size: 17px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+} */
+
+/* Default h6 style */
+h6{
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+.home-border{
+    border: 2px solid black;
+    border-radius: 6px;
+    display: flex;
+    /* margin-top: 30px; */
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: #f1f3f6;
+    box-shadow: 0px 0px 30px rgb(250, 206, 206);
+    margin: 80px;
+}
+
+.que{
+    position: absolute;
+    left: 500px;
+    top: 200px;
+    padding: 3px;
+    /* border: 2px solid red; */
+    color: #088178;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.option-1{
+    border: 2px solid black;
+    border-radius: 6px;
+    display: block;
+    margin: 90px 400px;
+    padding: 30px 50px;
+    box-shadow: 0px 0px 30px rgb(255 186 205);
+    font-family: 'Spartan', sans-serif;
+    margin-right: 30px;
+}
+
+.opt{
+    margin-right: 0px;
+}
+
+.option-2{
+    border: 2px solid black;
+    border-radius: 6px;
+    display: block;
+    margin: 90px 00px;
+    padding: 30px;
+    box-shadow: 0px 0px 50px rgb(255 186 205);
+    font-family: 'Spartan', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #010101;
+    font-weight: 550;
+}
+
+a:hover{
+    transition: 0.5s ease;
+    color: #088178;
+}

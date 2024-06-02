@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="left-section">
+        <h3>Contact us</h3>
+        <hr>
+        <div class="info-group">
+            <div class="info">
+                <p><i class="fa fa-facebook"></i></p>
+                <p class="values">123 Main Street, City, Country</p>
+            </div>
+        </div>
+
+        <div class="info-group">
+            <div class="info">
+                <p><i class="fa fa-envelope"></i></p>
+                <p class="values">info@company.com</p>
+            </div>
+        </div>
+
+        <div class="info-group">
+            <div class="info">
+                <p><i class="fa fa-phone"></i></p>
+                <p class="values">+1234567890</p>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <form>
+            <div class="form-group-one">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" placeholder="Enter FirstName : " id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" placeholder="Enter LastName : " id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <div class="form-group-one">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="Enter Email : " id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNo">Contact No:</label>
+                    <input type="number" placeholder="Enter Contact no. : " id="contactNo" name="contactNo" required>
+                </div>
+            </div>
+
+            <div class="form-group-one">
+                <div class="form-group">
+                    <label for="feedback">Feedback:</label>
+                    <textarea #myTextarea (input)="adjustTextareaHeight()" required placeholder="Enter Your Query : "
+                        name="feedback" rows="1" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" (click)="sendQuery()">Send</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,151 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Spartan', sans-serif; */
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.section-p1 {
+    padding: 40px 100px;
+    display: flex;
+    font-family: 'Spartan', sans-serif;
+}
+
+.section-m1 {
+    font-family: 'Spartan', sans-serif;
+}
+
+.no-Record{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 5px 5px #e3e2e2
+}
+
+.section-p1 .table thead tr th {
+    text-align: center;
+    color: #088178;
+    background-color: #E3E6F3;
+}
+
+.section-p1 .table tbody tr td {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    color: #05413d;
+}
+
+.section-p1 .table tbody tr td a {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    color: #05413d;
+}
+
+.proImgWidth{
+    width: 150px;
+}
+
+.proImg {
+    width: 60%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+table{
+    border: 2px solid #088178;
+    border-radius: 0.2rem;
+}
+
+.tableOne{
+    width: 700px;
+}
+
+.icon1{
+    display: block;
+    margin-left: 30px;
+    font-size: 23px;
+    transition: 0.1s;
+    color: #3e3d3d;
+}
+
+.icon1:hover{
+    font-size: 30px;
+    color: #191616;
+    cursor: pointer;
+}
+
+/* ----------------- */
+
+.tableTwo{
+    display: flex;
+    width: 402px;
+    height: 167px;
+    margin-left: 50px;
+}
+
+.price-details{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+#discount{
+    font-weight: 600;
+    color: #388e3c; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;  
+}
+
+.buy-now{
+    border: 2px solid #088178;
+    width: 403px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: -201px;
+    font-weight: 600;
+    font-size: 25px;
+    color: #00756d;
+    background-color: #f4fffe;
+    border-radius: 0.1rem;
+}

@@ -1,0 +1,132 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+
+    /* Sign-Up */
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-family: 'Spartan', sans-serif;
+}
+.row{
+    margin-top: 50px;
+    /* margin-left: 50px; */
+    margin-right: 130px;
+    font-family: 'Spartan', sans-serif;
+}
+.text-muted{
+    font-size: 30px;
+}
+label{
+    font-size: 19px;
+    font-family: 'Spartan', sans-serif;
+}
+.btn{
+    text-shadow: 1px 1px 5px rgb(113, 1, 1);
+}
+button{
+    margin-left: 5px; 
+    width: 250px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.card{
+    width: 652px;
+}
+
+input{
+    width: 300px;
+}
+
+.block-1{
+    display: flex;
+}
+
+.links{
+    margin-left: 8px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    /* Sign-In */
+
+.message{
+    display: block;
+    margin: auto;
+    font-size: 16px;
+    margin-left: 400px;
+    color: #088178;
+    width: 500px;
+    font-weight: 600;
+}
+
+.row{
+    margin-top: 50px;
+    /* margin-left: 50px; */
+    margin-right: 50px;
+    font-family: 'Spartan', sans-serif;
+}
+.text-muted{
+    font-size: 30px;
+}
+label{
+    font-size: 19px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.btn{
+    text-shadow: 1px 1px 5px rgb(113, 1, 1);
+}
+
+button{
+    margin-left: 5px; 
+    width: 130px;
+    font-family: 'Spartan', sans-serif;
+}
+
+a{
+    cursor: pointer;
+}
+
+.rowLogin{
+    margin-left: 200px;
+    width: 500px;
+}
+
+.cardLogin{
+    margin-left: 70px;
+    width: 510px;
+}
+
+.inputLoginFields{
+    width: 100%;
+}

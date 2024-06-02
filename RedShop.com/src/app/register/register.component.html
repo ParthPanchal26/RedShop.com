@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-md-5 mx-auto">
+        <div class="card rounded-3.9 shadow">
+            <div class="card-header bg-white">
+                <h3 class="text-muted">Sign Up</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" #RegisterUserForm="ngForm" #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="Fname"><span class="text-danger" style="font-size: 30px;">*</span>First Name : </label>
+                        <input [(ngModel)]="registerUserData.FirstName" #FirstName="ngModel" name="FirstName" type="text" class="form-control shadow rounded-2" id="Fname" required>
+                        <span class="text-danger" *ngIf="FirstName.invalid && FirstName.touched">*Invalid Field</span>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="Lname"><span class="text-danger" style="font-size: 30px;">*</span>Last Name : </label>
+                        <input [(ngModel)]="registerUserData.LastName" #LastName="ngModel" name="LastName" type="text" class="form-control shadow rounded-2" id="Lname" required>
+                        <span class="text-danger" *ngIf="LastName.invalid && LastName.touched">*Invalid Field</span>
+                    </div>
+                </div>
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="DOB"><span class="text-danger" style="font-size: 30px;">*</span>Date Of Birth : </label>
+                        <input [(ngModel)]="registerUserData.DOB" #DOB="ngModel" name="DOB" type="date" class="form-control shadow rounded-2" id="DOB" required>
+                        <span class="text-danger" *ngIf="DOB.invalid && DOB.touched">*Invalid Field</span>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="city"><span class="text-danger" style="font-size: 30px;">*</span>City : </label>
+                        <input [(ngModel)]="registerUserData.city" #city="ngModel" name="city" type="text" class="form-control shadow rounded-2" id="city" required>
+                        <span class="text-danger" *ngIf="city.invalid && city.touched">*Invalid Field</span>
+                    </div>
+                </div>
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="state"><span class="text-danger" style="font-size: 30px;">*</span>State : </label>
+                        <input [(ngModel)]="registerUserData.state" #state="ngModel" name="state" type="text" class="form-control shadow rounded-2" id="state" required>
+                        <span class="text-danger" *ngIf="state.invalid && state.touched">*Invalid Field</span>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="country"><span class="text-danger" style="font-size: 30px;">*</span>Country : </label>
+                        <input [(ngModel)]="registerUserData.country" #country="ngModel" name="country" type="text" class="form-control shadow rounded-2" id="country" required>
+                        <span class="text-danger" *ngIf="country.invalid && country.touched">*Invalid Field</span>
+                    </div>
+                </div>
+
+                
+                    <div class="form-group p-1">
+                        <label for="contactNo"><span class="text-danger" style="font-size: 30px;">*</span>Contact No : </label>
+                        <input [(ngModel)]="registerUserData.contactNo" #contactNo="ngModel" name="contactNo" type="number" class="form-control shadow rounded-2" id="contactNo" required>
+                        <span class="text-danger" *ngIf="contactNo.invalid && contactNo.touched">*Invalid Field</span>
+                    </div>
+
+                <div class="block-1">
+                    <div class="form-group p-1">
+                        <label for="email"><span class="text-danger" style="font-size: 30px;">*</span>Email : </label>
+                        <input [(ngModel)]="registerUserData.email" #email="ngModel" name="email" type="email" class="form-control shadow rounded-2" id="email" required>
+                        <span class="text-danger" *ngIf="email.invalid && email.touched">*Invalid Field</span>
+                    </div>
+                    <div class="form-group p-1">
+                        <label for="password"><span class="text-danger" style="font-size: 30px;">*</span>Create Password : </label>
+                        <input [(ngModel)]="registerUserData.password" #password="ngModel" name="password" type="password" class="form-control shadow rounded-2" id="password" required>
+                        <span class="text-danger" *ngIf="password.invalid && password.touched">*Invalid Field</span>
+                    </div>
+                </div>
+
+                    <button (click)="registerUser()" [disabled]="RegisterUserForm.invalid" type="submit" class="btn shadow btn-primary mb-2 mt-1 shadow">Sign Up</button>
+
+                    <div class="links">
+                        <a routerLink="/login" style="color: blue;">Have an account?&nbsp;&nbsp;&nbsp;<span style="color: red;">Sign In</span> </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr style="margin-left: 20px; margin-right: 20px;">

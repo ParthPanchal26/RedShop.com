@@ -1,0 +1,181 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Spartan', sans-serif; */
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+.section-p1{
+    padding: 40px 80px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.section-m1{
+    margin: 40px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table td, th{
+    /* border: 2px solid #088178; */
+    padding: 1rem;
+    font-weight: 600;
+}
+
+table thead tr th{
+    font-size: 18px;
+}
+
+
+textarea{
+    font-weight: 600;
+    padding: 30px 30px;
+    background-color: white;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.text-shadow{
+    text-shadow: 5px 5px #e3e2e2;
+}
+
+.color{
+    word-wrap: break-word;
+}
+
+.image{
+    text-align: center;
+
+}
+
+.desc{
+    text-align:center;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.table{
+    border: 2px solid rgb(38, 38, 38);
+    border-radius: 3px;
+}
+
+thead tr{
+    background: #E3E6F3;
+    border-bottom: 2px solid rgb(38, 38, 38);
+}
+
+.btn{
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn1{
+    color: #05514c;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.btn1:hover{
+    color: #02504b;
+    /* background: #1a4f72; */
+    background: #d2d9f6;
+    /* border-radius: 0 0 50% 50%; */
+    border-radius: 1rem;
+}
+
+tbody tr{
+    background-color: #fff;
+    transition: 0.8s;
+}
+
+textarea{
+    border-radius: 0.6rem;
+    transition: 0.2s;
+}
+
+tbody tr:hover, textarea:hover{
+    background-color: #edeffa;
+}
+
+
+tbody tr td img{
+    border-radius: 0.6rem;
+}
+
+.icon1{
+    display: block;
+    margin-left: 30px;
+    font-size: 23px;
+    transition: 0.1s;
+    color: #3e3d3d;
+}
+
+.icon2{
+    display: block;
+    margin-left: 25px;
+    font-size: 23px;
+    transition: 0.2s;
+    color: #3e3d3d;
+}
+
+.icon1:hover, .icon2:hover{
+    font-size: 30px;
+    color: #191616;
+    cursor: pointer;
+}
+
+.message{
+    width: 500px;
+    display: block;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #ffffff;
+    margin-bottom: 0.3rem;
+}

@@ -1,0 +1,66 @@
+<section class="section-p1">
+    <div class="borderBox">
+        <div class="addProduct">
+            <h1 id="heading" class="text-shadow">Add Product</h1>
+            <p class="message">{{addProductMsg}}</p>
+        </div>
+        <div class="container">
+            <form class="form" id="form" #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)">
+                <div class="flex1">
+                    <div class="label">
+                        <label for="name">Name : </label> <br>
+                        <input type="text" name="name" [ngModel]="name" id="name" class="name shadow" required>
+                    </div>
+                    <div>
+                        <label for="price">Price : </label> <br>
+                        <input type="text" name="price" [ngModel]="price" id="price" class="price shadow" required>
+                    </div>
+                </div>
+                <br>
+                <div class="flex2">
+                    <div class="label">
+                        <label for="color">Color : </label> <br>
+                        <input type="text" name="color" [ngModel]="color" id="color" class="shadow" required>
+                    </div>
+                    <div>
+                        <label for="category">Category : </label> <br>
+                        <select id="category" name="category" ngModel>
+                            <option class="category-option category-option-style" value="Smartphone & tablets">Smartphone & tablets</option>
+                            <option class="category-option" value="Home & Kitchen">Home & Kitchen</option>
+                            <option class="category-option category-option-style" value="Clothes">Clothes</option>
+                            <option class="category-option" value="Beauty & Personal Care">Beauty & Personal Care</option>
+                            <option class="category-option category-option-style" value="Sports & Outdoors">Sports & Outdoors</option>
+                            <option class="category-option" value="Gadgets">Gadgets</option>
+                            <option class="category-option category-option-style" value="Toys & Games">Toys & Games</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="flex3">
+                    <div class="label">
+                        <label for="description">Description : </label> <br>
+                        <textarea name="description" [ngModel]="description" id="description" class="shadow"
+                            required></textarea>
+                    </div>
+                    <div>
+                         <label for="imgURL" id="image-label">Image : </label> <br> 
+                        <!-- <input type="text" [ngModel]="ImageURL" name="ImageURL" id="ImgURL" class="shadow" required> -->
+                        <input type="file" (change)="onFileSelected($event)"  [ngModel]="ImageURL" name="ImageURL" id="ImgURL" required />
+                    </div>
+                </div>
+                <br>
+                <div class="flex4">
+                    <div class="label">
+                        <label for="date">Date : </label> <br>
+                        <input type="date" name="date" [ngModel]="date" id="date" class="date shadow" required>
+                    </div>
+                    <div>
+                        <button type="submit" [disabled]="addProduct.invalid" name="submit" id="submit"
+                            value="Add Product" class="btnn shadow">Add Product</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<hr>

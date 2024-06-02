@@ -1,0 +1,123 @@
+<div id="come"></div>
+<hr>
+    <section id="carousel">
+        <ngb-carousel class="carousel">
+            <ng-template class="carouselData" ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img src="/assets/home-imgs/homeCaro_1.png" class="carouselIMG" id="caroOne" alt=" ... " />
+                    <hr>
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template class="carouselData" ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img src="/assets/home-imgs/homeCaro_2.png" class="carouselIMG" id="caroTwo" alt=" ... " />
+                    <hr>
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template class="carouselData" ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img src="/assets/home-imgs/homeCaro_3.png" class="carouselIMG" id="caroThree" alt=" ... " />
+                    <hr>
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </section>
+<!-- <hr> -->
+    <!-- <section *ngIf="popularProducts?.length==0" id="hero">
+        <h4>Trad-In-Offer</h4>
+        <h2>Super Value deals</h2>
+        <h1>On All Products</h1>
+        <p id="msgShop">Save more with coupons & up to 70% off!</p>
+        <a href="#product1"><button class="btnNow">Shop Now!</button></a>
+    </section> -->
+<!-- <hr> -->
+    <section id="product1" class="section-p1">
+        <h2 id="clothesTopWeb">Trending</h2>
+        <p>Collection Of New Tranding Products</p>
+        <div class="pro-container">
+
+            <div class="pro" *ngFor="let item of homeProduct">
+                <img routerLink="/product-details/{{item.id}}" src="{{item.baseImg}}" class="productIMG" alt="image not appear">
+                <div class="des">
+                    <h5 routerLink="/product-details/{{item.id}}">{{item.name}}</h5>
+                    <div class="star">
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4 routerLink="/product-details/{{item.id}}" class="price">{{item.price}}</h4>
+                </div>
+                
+                <a routerLink="/product-details/{{item.id}}" class="buy"><i class="fa fa-shopping-cart" id="addCart"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h4>Repair Service</h4>
+        <h2>Up to <span>30% off</span> on All Smart Phones, Laptop & other Electronics devices!</h2>
+    </section>
+
+    <section id="product1" class="section-p1 descText">
+        <h2>Clothes</h2>
+        <p>Get up To 13% off</p>
+        <div class="pro-container">
+
+            <div class="pro" *ngFor="let item of clothes">
+                <img routerLink="/product-details/{{item.id}}" src="{{item.baseImg}}" class="productIMG" alt="image not appear">
+                <div class="des">
+                    <h5 routerLink="/product-details/{{item.id}}">{{item.name}}</h5>
+                    <div class="star">
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star chaked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h4 routerLink="/product-details/{{item.id}}" class="price">{{item.price}}</h4>
+                </div>
+                
+                <a routerLink="/product-details/{{item.id}}" class="buy"><i class="fa fa-shopping-cart" id="addCart"></i></a>
+            </div>
+
+        </div>
+        <a href="#come" routerLinkActive="router-link-active"><i class="fas fa-long-arrow-alt-up"></i></a>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box box1">
+            <h4>Sale! Sale! Sale!</h4>
+            <h2>Get Up To <span>20% off</span> on Clothes</h2>
+            <span>The Best adidas Clothes on Sale at RedShop.com</span>
+            <a routerLink="/shop"><button>Shop now</button></a>
+        </div>
+        <div class="banner-box">
+            <h4>Sale! Sale! Sale!</h4>
+            <h2>Get Up To <span>40% off</span> on Laptops!</h2>
+            <span>The Best Configuration Laptops are on Sale at RedShop.com</span>
+            <!-- <button>Shop now</button> -->
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>SignUp To get News about Offers</h4>
+            <p>Get E-mail Updates about letest shop and <span>special offers!</span></p>
+        </div>
+        <div class="form">
+            <input type="email" name="E-mailNews" placeholder="Enter your Email">
+            <button><a routerLink="login" style="text-decoration: none; color: white;">Sign up</a></button>
+        </div>
+    </section>

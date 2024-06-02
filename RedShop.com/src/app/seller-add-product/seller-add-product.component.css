@@ -1,0 +1,346 @@
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Spartan', sans-serif; */
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.section-m1 {
+    margin: 40px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* .borderBox{
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    padding-top: 40px;
+}
+
+#heading{
+    display: flex;
+    margin: 0px auto;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+input[type="text"]{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#form{
+    display: flex;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button[type="submit"]{
+    border: 2px solid red;
+    padding: 0.3rem;
+    width: 635px;
+    border-radius: 0.3rem;
+    background-color: rgb(243, 85, 57);
+    font-weight: 605;
+    color: #262626;
+    color: #fff;
+    transition: 0.3s;
+    border: 2px solid black;
+    margin-left: -90px;
+}
+
+button[type="submit"]:hover{
+    border: 2px solid #088178;
+    background-color: rgb(56, 253, 56);
+    padding: 0.4rem;
+    color: #000000;
+    font-weight: 615;
+}
+
+input[type="text"]{
+    transition: 0.3s;
+}
+
+input[type="text"]:hover{
+    border: 2px solid #053e3a;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    font-weight: 510;
+    background-color: #81bdd3;
+}
+
+.label{
+    margin-right: 30px;
+}
+
+.partOne{
+    display: flex;
+}
+
+.partTwo{
+    display: flex;
+}
+
+.partThree{
+    display: flex;
+}
+
+.partFour{
+    width: 450px;
+}
+
+
+
+input[type="text"]{
+    width: 300px;
+    font-size: 20px;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #9acde0;
+    border: 2px solid black;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0.2rem #0077FF;
+}
+
+textarea{
+    width: 300px;
+    font-size: 20px;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #9acde0;
+    border: 2px solid black;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+textarea:focus{
+    box-shadow: 0 0 0 0.2rem #0077FF;
+}
+
+textarea{
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+textarea:hover{
+    border: 2px solid #053e3a;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    background-color: #81bdd3;
+    font-weight: 510;
+}
+
+.text-shadow{
+    text-shadow: 5px 5px #e3e2e2;
+} */
+
+.message {
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-weight: 600;
+    border: 2px solid #088178;
+    border-radius: 0.3rem;
+    font-size: 20px;
+    /* background-color: #e0dede; */
+    /* margin-top: 0.3rem; */
+    margin-bottom: 0.3rem;
+}
+
+#heading {
+    text-align: center;
+    text-shadow: 5px 5px #e3e2e2;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form {
+    display: block;
+    border: 2px solid #222;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 50px 5px rgb(227, 226, 226);
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+
+#category {
+    border: 2px solid #065d58;
+    border-radius: 0.3rem;
+    width: 300px;
+    height: 52px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+option {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 3px 3px;
+}
+
+.category-option-style {
+    background-color: #E3E6F3;
+}
+
+input {
+    border: 2px solid #065d58;
+    border-radius: 0.3rem;
+    width: 300px;
+    height: 52px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+input:hover {
+    border: 2px solid #088178;
+}
+
+input[type="file"]{
+    border: 0;
+}
+
+#ImgURL::-webkit-file-upload-button {
+    content: 'Choose File';
+    display: inline-block;
+    background: linear-gradient(to bottom, #ffffff, #d9d7ff);
+    border: 2px solid #088178;
+    border-radius: 0.3rem;
+    padding: 3px 3px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    margin-right: 10px;
+    width: 140px;
+}
+
+#image-label {
+    margin-left: 6px;
+}
+
+textarea {
+    border: 2px solid #065d58;
+    border-radius: 0.3rem;
+    width: 300px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 6px;
+}
+
+.btnn {
+    padding: 0.6rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+    border: 2px solid #088178;
+    border-radius: 0.3rem;
+    background-color: rgb(40, 240, 40);
+    transition: 0.4s;
+    width: 300px;
+    text-align: center;
+    margin-top: 26px;
+    justify-content: center;
+}
+
+.btnn:hover {
+    background-color: rgb(25, 225, 25);
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    border: 2px solid #064a45;
+    border-radius: 0.4rem;
+}
+
+.flex1 {
+    display: flex;
+    justify-content: center;
+}
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+}
+
+.flex3 {
+    display: flex;
+    justify-content: center;
+}
+
+.flex4 {
+    display: flex;
+    justify-content: center;
+}
+
+.date {
+    font-weight: 600;
+    text-align: center;
+}

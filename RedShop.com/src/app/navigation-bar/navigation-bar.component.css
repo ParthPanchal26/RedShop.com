@@ -1,0 +1,222 @@
+/* Text Font */
+@import url('http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Default Properties */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default h1 style */
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Default h2 style */
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Default h3 style */
+/* h3{
+    font-size: 28px;
+    line-height: 54px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+} */
+
+/* Default h4 style */
+h4{
+    font-size: 20px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Default h5 style */
+/* h4{
+    font-size: 17px;
+    color: #222;
+    font-family: 'Spartan', sans-serif;
+} */
+
+/* Default h6 style */
+h6{
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Spartan', sans-serif;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+/* Header */
+
+/* Website logo's style */
+.logo{
+    border-radius: 22px;
+    padding: 0 6px;
+    box-shadow: 0 5px 15px rgb(237, 31, 83);
+}
+
+/* Whole navigation menu */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 1px 1px rgb(255, 164, 190);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* NavLists container */
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* NavList style */
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* NavLink style */
+#navbar li a{
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    transition: 0.5s ease;
+    font-weight: 600;
+}
+
+.CartLinkBtn{
+    font-size: 24px;
+    color: #088178;
+}
+
+/* NavLink When active */
+#navbar li a:hover,#navbar li a .active{
+    color: #088178;
+    cursor: pointer;
+}
+
+/* NavLink hover */
+#navbar li a.active::after, #navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2.1px;
+    border-radius: 8px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    cursor: pointer;
+}
+
+#searchBox{
+    font-size: 16px;
+    border: 1.8px solid #088178;
+    border-radius: 4px;
+    width: 300px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #eef1ff;
+    padding: 3px 3px;
+    font-weight: 500;
+}
+
+#serachBtn{
+    margin-left: -3px;
+    padding: 3px 3px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1.8px solid #088178;
+    background-color: #eef1ff;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.suggestedResults{  
+    position: absolute;
+    width: 350px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1.3px solid rgb(0, 0, 0);
+    border-radius: 0.3rem;
+}
+
+.suggestedResults li{
+    display: flex;
+    text-align: center;
+    margin: 5px;
+}
+
+.resultName{
+    display: flex;
+    text-align: center;
+    word-wrap:break-word;
+}
+
+.suggestedResults li img{
+    height: 40px;
+    width: 30px;
+    object-fit: contain;
+    margin-right: 1rem;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.suggestedResults li{
+   padding: 5px;
+}
+
+.SellerName{
+    border: 2px solid #088178;
+    border-radius: 8px;
+    /* font-weight: 900; */
+    font-family: 'Spartan', sans-serif; 
+    background-color: rgb(253, 245, 247);
+    box-shadow: 0 4px 20px rgb(250, 153, 178);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+#logOut{
+    box-shadow: 0 5px 15px rgb(251, 161, 185);
+    cursor: pointer;
+}
+
+#orders{
+    position: absolute;
+    top: -10px;
+    width: 100px;
+}

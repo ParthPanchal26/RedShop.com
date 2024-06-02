@@ -1,0 +1,65 @@
+<section id="header">
+  <a routerLink="/"><img src="assets/logo_btn/Logo.png" class="logo" alt=""></a>
+
+  <div>
+    <ul id="navbar" class="activet">
+
+      
+
+      <div class="navbar" [ngSwitch]="menuType">
+        <ul class="navbar" *ngSwitchCase="'default'">
+          <li *ngIf="menuType === 'default' || 'user'"><input type="search" #searchInput (keyup)="searchProduct($event)"
+            (blur)="hideSearch()" name="search" id="searchBox" placeholder="Search your product here">
+          <input (click)="submitSearch(searchInput.value)" type="button" id="serachBtn" value="search">
+          <ul class="suggestedResults" *ngIf="searchResult">
+            <li *ngFor="let item of searchResult">
+              <img src="{{item.baseImg}}" alt="">
+              <a class="searchResultStyle resultName" (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
+            </li>
+          </ul>
+        </li>
+          <li><a routerLink="home-menu" routerLinkActive="active" id="home">Home</a></li>
+          <li><a routerLink="shop" routerLinkActive="active" id="shop">Shop</a></li>
+          <li><a routerLink="about-us" routerLinkActive="active" id="contact">About us</a></li>
+          <li><a routerLink="/contact-us" routerLinkActive="active" id="contact">Contact us</a></li>
+          <li><a routerLink="/login" routerLinkActive="active"><i class="fas fa-shopping-cart CartLinkBtn"></i></a></li>
+          <li>
+            <!-- <a href="/home-menu" *ngIf="_authService.loggedIn()" routerLinkActive="active" id="LogOut"
+              (click)="_authService.logoutUser()">LogOut</a> -->
+            <a routerLink="login" *ngIf="!_authService.loggedIn()" routerLinkActive="active" class="green"
+              id="login">Login</a>
+          </li>
+        </ul>
+        <!--  --> <!--  --> <!--  --> <!--  --> <!--  --> <!--  --> <!--  --> <!--  -->
+        <ul class="navbar" *ngSwitchCase="'seller'">
+          <li><a routerLink="seller-add-product" routerLinkActive="active" id="shop">Add Products</a></li>
+          <li><a routerLink="seller-home" routerLinkActive="active" id="home">Product List</a></li>
+          <li><a routerLink="seller-selled-products" routerLinkActive="active" id="home">Selled Products</a></li>
+          <li><a href="/home-menu" routerLinkActive="active" class="" id="LogOut" (click)="logout()">Logout</a></li>
+          <li><a routerLink="/#" routerLinkActive="active" class="SellerName">{{ sellerName | titlecase }}</a></li>
+        </ul>
+        <!--  --> <!--  --> <!--  --> <!--  --> <!--  --> <!--  --> <!--  --> <!--  -->
+        <ul class="navbar" *ngSwitchCase="'user'">
+          <li *ngIf="menuType === 'default' || 'user'"><input type="search" #searchInput (keyup)="searchProduct($event)"
+            (blur)="hideSearch()" name="search" id="searchBox" placeholder="Search your product here">
+          <input (click)="submitSearch(searchInput.value)" type="button" id="serachBtn" value="search">
+          <ul class="suggestedResults" *ngIf="searchResult">
+            <li *ngFor="let item of searchResult">
+              <img src="{{item.baseImg}}" alt="">
+              <a class="searchResultStyle resultName" (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
+            </li>
+          </ul>
+        </li>
+          <li><a routerLink="home-menu" routerLinkActive="active" id="home">Home</a></li>
+          <li><a routerLink="shop" routerLinkActive="active" id="shop">Shop</a></li>
+          <li><a routerLink="about-us" routerLinkActive="active" id="about-us">About us</a></li>
+          <li><a routerLink="/contact-us" routerLinkActive="active" id="contact">Contact us</a></li>
+          <li><a routerLink="/cart-page" routerLinkActive="active"><i class="fas fa-shopping-cart CartLinkBtn"></i></a></li>
+          <li><a (click)="userLogOut()" (click)="_authService.logoutUser()" routerLinkActive="active" id="LogOut">Logout</a></li>
+          <li><a routerLink="/My-Orders" routerLinkActive="active" id="orders">My Orders</a></li>
+        </ul>
+      </div>
+    </ul>
+  </div>
+
+</section>

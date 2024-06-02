@@ -1,0 +1,43 @@
+<section class="section-p1">
+    <div class="listHeading">
+        <h2 class="text-shadow heading">Products List </h2>
+        <p class="message">{{deleteMsg}}</p>
+    </div>
+
+    <div class="container">
+        <div class="table" *ngIf="productList?.length != 0">
+            <table class="shadow">
+                <thead>
+                    <tr>
+                        <th class="btns btn1" id="img">Image</th>
+                        <th class="btns btn1">Name</th>
+                        <th class="btns btn1">Price</th>
+                        <th class="btns btn1">Color</th>
+                        <th class="btns btn1">Date</th>
+                        <th class="btns btn1">Category</th>
+                        <th class="desc btns btn1">Description</th>
+                        <th class="btn1">Delete</th>
+                        <th class="btn1">Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of productList">
+                        <td class="image"><img src="{{item.baseImg}}" alt=""></td>
+                        <td class="info">{{item.name | titlecase}}</td>
+                        <td class="info">{{item.price}}</td>
+                        <td class="info color">{{item.color | titlecase}}</td>
+                        <td class="info color">{{item.date | titlecase}}</td>
+                        <td class="info">{{item.category | titlecase}}</td>
+                        <td class="info"><textarea disabled cols="20" rows="3">{{item.description | titlecase}}</textarea></td>
+                        <td class="info"><button (click)="deleteProduct(item.id)" class="icon1"><fa-icon [icon]="deleteIcon"></fa-icon></button></td>
+                        <td class="info"><a routerLink="/seller-update-product/{{item.id}}"><button class="icon2"><fa-icon [icon]="updateProduct"></fa-icon></button></a></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="productList?.length == 0" class="text-shadow heading" id="noRecord">No Record Found</div>
+    </div>
+</section> 
+<!-- <hr> -->
+<!-- <i class="fa-solid fa-file-pen"></i> -->
